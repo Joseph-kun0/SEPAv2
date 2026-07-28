@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\CheckRol;
+use Illuminate\Support\Facades\Auth;
 
 // Rutas Públicas
 Route::get('/', function () { 
@@ -18,10 +19,6 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::get('/register', function () { 
     return view('auth.register'); 
 })->name('register');
-
-Route::get('/soporte', function () { 
-    return view('soporte'); 
-})->name('soporte');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
