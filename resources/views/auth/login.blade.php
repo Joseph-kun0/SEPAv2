@@ -27,11 +27,18 @@
                 <p class="text-sm text-gray-600 mt-1">Ingresa tus credenciales para acceder al sistema</p>
             </div>
 
-            <form action="#" method="POST" class="space-y-4">
+            <!-- Mostrar alertas de credenciales incorrectas -->
+            @if ($errors->any())
+                <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    {{ $errors->first() }}
+                </div>
+            @endif
+
+            <form action="{{ route('login.post') }}" method="POST" class="space-y-4">
                 @csrf
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Correo Electrónico o Usuario</label>
-                    <input type="text" name="login" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
+                    <input type="text" name="login" value="{{ old('login') }}" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
                 </div>
 
                 <div>
@@ -55,13 +62,13 @@
     </main>
 
     <!-- Botón flotante de Soporte Técnico -->
-<a href="{{ route('soporte') }}" 
-title="Soporte Técnico"
-class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border border-white/20">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M12 18h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-</a>
+    <a href="{{ route('soporte') }}" 
+        title="Soporte Técnico"
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M12 18h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </a>
 
     <footer class="bg-slate-900/80 backdrop-blur-md text-gray-400 py-4 text-center text-sm border-t border-slate-800 relative z-10">
         <p>&copy; {{ date('Y') }} WebPedimentos. Todos los derechos reservados.</p>
