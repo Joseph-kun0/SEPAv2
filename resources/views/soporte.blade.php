@@ -24,9 +24,7 @@
         <div class="max-w-lg w-full bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-white/20 space-y-6">
             <div class="text-center">
                 <h2 class="text-3xl font-extrabold text-slate-900">Soporte Técnico</h2>
-                <h1 class="text-lg text-gray-600 mt-1">No se, espero haberte ayudado</h1>
-                
-                <!--- <p class="text-sm text-gray-600 mt-1">¿Tienes dudas o problemas con la plataforma? Envíanos un mensaje.</p>
+                <p class="text-sm text-gray-600 mt-1">¿Tienes dudas o problemas con la plataforma? Envíanos un mensaje.</p>
             </div>
 
             <form action="#" method="POST" class="space-y-4">
@@ -55,7 +53,7 @@
                     Enviar Mensaje
                 </button>
             </form>
-        </div> --->
+        </div>
     </main>
 
     <footer class="bg-slate-900/80 backdrop-blur-md text-gray-400 py-4 text-center text-sm border-t border-slate-800 relative z-10">
