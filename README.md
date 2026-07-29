@@ -96,4 +96,4 @@ El proyecto se encuentra en desarrollo activo. Las funcionalidades serán incorp
 
 Seczo 2
 
-HOLA ZOI MAPACHE Y BUZKO ZECZO j
+HOLA ZOI MAPACHE Y BUZKO ZECZO jjhj
