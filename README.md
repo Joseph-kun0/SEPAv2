@@ -93,3 +93,5 @@ http://127.0.0.1:8000
 ## Estado del proyecto
 
 El proyecto se encuentra en desarrollo activo. Las funcionalidades serán incorporadas progresivamente conforme avance el desarrollo del simulador.
+
+Seczo
